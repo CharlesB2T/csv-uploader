@@ -28,4 +28,28 @@
            fclose($file);  
      }
   }   
+function get_all_records(){
+    $con = getdb();
+    $Sql = "SELECT * FROM expensesinfo";
+    $result = mysqli_query($con, $Sql);  
+    if (mysqli_num_rows($result) > 0) {
+     echo "<div class='table-responsive'><table id='myTable' class='table table-striped table-bordered'>
+             <thead><tr><th>EMP ID</th>
+                          <th>Category</th>
+                          <th>Price</th>
+                          <th>Amount</th>
+                        </tr></thead><tbody>";
+     while($row = mysqli_fetch_assoc($result)) {
+         echo "<tr><td>" . $row['id']."</td>
+                   <td>" . $row['category']."</td>
+                   <td>" . $row['price']."</td>
+                   <td>" . $row['amount']."</td></tr>";        
+     }
+    
+     echo "</tbody></table></div>";
+     
+} else {
+     echo "you have no records";
+}
+}
  ?>
