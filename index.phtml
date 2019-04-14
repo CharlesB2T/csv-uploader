@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<script rel="stylesheet" src="https://use.fontawesome.com/ce856b3fda.js"></script>
+  </head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="row">
+                <form class="form-horizontal" action="indexController.php" method="post" name="upload_csv" enctype="multipart/form-data">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Form Name</legend>
+                        <!-- File Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Select File</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <?php
+               get_all_records();
+            ?>
+        </div>
+    </div>
+</body>
+</html>
