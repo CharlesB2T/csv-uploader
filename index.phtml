@@ -13,7 +13,7 @@
                 <form class="form-horizontal" action="indexController.php" method="post" name="upload_csv" enctype="multipart/form-data">
                     <fieldset>
                         <!-- Form Name -->
-                        <legend>Form Name</legend>
+                        <legend>Import &amp; Export CSV Data</legend>
                         <!-- File Button -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="filebutton">Select File</label>
@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="singlebutton">Import data</label>
                             <div class="col-md-4">
-                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import CSV</button>
                             </div>
                         </div>
                     </fieldset>
@@ -34,6 +34,15 @@
             <?php
                get_all_records();
             ?>
+	    <div>
+		<form class="form-horizontal" action="indexController.php" method="post" name="upload_csv" enctype="multipart/form-data">
+			<div class="form-group">
+                        	<div class="col-md-4 col-md-offset-4">
+					<input type="submit" name="Export" class="btn btn-success" value="Export to CSV"/>
+                        	</div>
+			</div>                    
+		</form>           
+	    </div>
         </div>
     </div>
 </body>
