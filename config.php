@@ -1,6 +1,6 @@
 <?php
 function getdb(){
-$servername = "shareddb-g.hosting.stackcp.net";
+$servername = "localhost";
 $username = "3731da7b";
 $password = "tg9svw9k8n";
 $db = "travelexpenses-3731da7b";
