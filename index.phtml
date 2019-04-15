@@ -3,8 +3,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script rel="stylesheet" src="https://use.fontawesome.com/ce856b3fda.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 <body>
     <div id="wrap">
@@ -15,18 +15,14 @@
                         <!-- Form Name -->
                         <legend>Import &amp; Export CSV Data</legend>
                         <!-- File Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="filebutton">Select File</label>
-                            <div class="col-md-4">
-                                <input type="file" name="file" id="file" class="input-large">
-                            </div>
+                        <div class="form-group col-ms-10">
+                            <label class="control-label" for="filebutton">Select File&#58;</label>
+							<input type="file" name="file" id="file" class="input-large">
                         </div>
-                        <!-- Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
-                            <div class="col-md-4">
-                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import CSV</button>
-                            </div>
+                        <!-- Import Button -->
+                        <div class="form-group col-ms-10">
+                            <label class="control-label" for="singlebutton">Import data&#58;</label>
+                            <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
                         </div>
                     </fieldset>
                 </form>
@@ -34,16 +30,17 @@
             <?php
                get_all_records();
             ?>
-	    <div>
-		<form class="form-horizontal" action="indexController.php" method="post" name="upload_csv" enctype="multipart/form-data">
-			<div class="form-group">
-                        	<div class="col-md-4 col-md-offset-4">
-					<input type="submit" name="Export" class="btn btn-success" value="Export to CSV"/>
-                        	</div>
-			</div>                    
-		</form>           
-	    </div>
-        </div>
+			<div>
+				<!-- Export Button -->
+				<form class="form-horizontal" action="indexController.php" method="post" name="upload_csv" enctype="multipart/form-data">
+					<div class="form-group col-md-6">
+                        <div class="col-md-offset-6">
+							<input type="submit" name="Export" class="btn btn-success" value="Export to CSV"/>
+                        </div>
+					</div>                    
+				</form>           
+			</div>
+        </div> <!-- container-->
     </div>
 </body>
 </html>
